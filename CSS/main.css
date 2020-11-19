@@ -1,0 +1,271 @@
+/*
+Generic Website 1 - By J-C Castagne @ Github https://github.com/JCcastagne
+*/
+
+/*
+color palette:
+purple: rgb(113,5,132)
+pink: rgb(199,2,119)
+indigo: rgb(52,162,163)
+*/
+
+/*defaults*/
+
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+box-sizing: border-box;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color: black;
+background-color: white;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*defaults^*/
+
+/*landing*/
+
+main{
+  margin: auto;
+  padding: 4em 1em;
+  width: clamp(280px, 90vw, 1000px);
+  /* max-width: 90vw; */
+}
+
+header{
+  background-image: url(../img/header-g.jpg);
+  background-color: black;
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+
+@media all and (min-width: 800px){
+  header{
+    background-image: url(/img/header-rotated-g.jpg);
+  }
+}
+
+.title{
+  position: absolute;
+  bottom: 0em;
+  left: 0.25em;
+  padding-bottom: 0.5em;
+  font-weight: 100;
+  font-size: clamp(3em, 15vw, 6em);
+  background: rgb(52,162,163);
+  background: linear-gradient(45deg, rgba(52,162,163,1) 0%, rgba(73,133,149,1) 28%, rgba(187,6,114,1) 51%, rgba(194,2,168,1) 72%, rgba(113,5,132,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 30px rgb(0, 0, 0);
+  line-height: 0.9em;
+}
+
+/*landing^*/
+
+/*main body*/
+
+.secHead1{
+  background-image: url(../img/section1.jpeg);
+  border-bottom: 4px solid rgb(113,5,132);
+}
+
+.secHead2{
+  background-image: url(../img/section2.jpeg);
+  border-bottom: 4px solid rgb(199,2,119);
+}
+
+.secHead3{
+  background-image: url(../img/section3.jpeg);
+  border-bottom: 4px solid rgb(52,162,163);
+}
+
+.sectionHeaders{
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.titleBanner{
+  display: flex;
+  /* align-items: flex-end; */
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.titleBanner a:active,
+.titleBanner a:visited,
+.titleBanner a{
+  text-decoration: none;
+  color: black;
+}
+
+.sectionTitles{
+  font-size: 1.9em;
+  padding: 0.5em;
+}
+
+#Chevron{
+  fill: black;
+}
+svg{
+  margin-top: 1em;
+}
+
+.learnMore{
+  transition: all 0.6s ease-in-out;
+  margin: initial;
+  display: flex;
+}
+.learnMore:hover, .learnMore:focus{
+  padding-left: 2em;
+  background-color: none;
+  box-shadow: none;
+}
+
+.sectionContainers p{
+  font-size: 1em;
+  padding: 1em 0;
+}
+
+main{
+  border-bottom: 1px solid black;
+}
+
+/*main body^*/
+
+/*bottomBanner*/
+
+/*
+colour palette:
+pink: rgb(254,159,205)
+purple: rgb(168,87,153)
+black
+*/
+
+.bottomBanner{
+  background-image: url(../img/header\ 2.jpeg);
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4em auto;
+  width: calc(clamp(280px, 90vw, 1000px) - 2em);
+  height: 15vh;
+  min-height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.socialIcons{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background: rgb(254,159,205);
+  background: linear-gradient(45deg, rgba(254,159,205,1) 0%, rgba(168,87,153,1) 100%);
+}
+
+.socialIcons a:hover{
+  box-shadow: none;
+  padding-left: 0;
+}
+
+.socialIcons img{
+  height: 50px;
+  margin-top: 150%;
+  transition: all 0.3s ease-in-out;
+}
+
+.socialIcons img:hover,
+.socialIcons img:focus{
+  height: 60px;
+  margin-top: 115%;
+}
+
+.followUs{
+  color: white;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  font-size: 1.563em;
+  padding: 1em;
+  font-weight: 100;
+  text-shadow: 1px 1px 50px black;
+}
+
+/*bottomBanner^*/
+
+/*footer*/
+
+.footer a,
+.footer a:visited,
+.footer a:active{
+  color: black;
+  text-decoration: none;
+  margin: 1em;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover,
+.footer a:focus{
+  padding-left: 0;
+  box-shadow: none;
+  color: white;
+}
+
+.footer{
+  background-color: rgb(99, 70, 93);
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.1em;
+}
+
+/*footer^*/
+
+/*sub footer*/
+
+.subFooter{
+  color: rgb(77, 77, 77);
+  background-color: rgb(0, 0, 0);
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+.subFooter a,
+.subFooter a:hover,
+.subFooter a:active,
+.subFooter a:visited,
+.subFooter a:focus{
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+  padding-left: 0;
+}
+
+.subFooter div{
+  display: flex;
+  justify-content: space-around;
+  width: calc(clamp(280px, 90vw, 1000px) - 2em);
+  margin: auto;
+  text-align: center;
+}
+
+/*sub footer^*/
