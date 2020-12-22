@@ -93,6 +93,10 @@ header{
   border-bottom: 4px solid rgb(52,162,163);
 }
 
+.sectionContainers{
+  padding: 2em;
+}
+
 .sectionHeaders{
   background-size: cover;
   background-position: center;
@@ -100,6 +104,7 @@ header{
   min-height: 200px;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 2em;
 }
 
 .titleBanner{
@@ -262,10 +267,15 @@ black
 
 .subFooter div{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: calc(clamp(280px, 90vw, 1000px) - 2em);
   margin: auto;
   text-align: center;
+}
+
+.subFooter div a{
+  transform: translateX(-1.55em);
+  padding: 0 1em;
 }
 
 /*sub footer^*/
